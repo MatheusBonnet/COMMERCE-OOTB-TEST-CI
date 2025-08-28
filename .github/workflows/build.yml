@@ -15,12 +15,6 @@ jobs:
       # 1️⃣ Checkout do seu repositório (sua pasta custom)
       - name: Checkout repository
         uses: actions/checkout@v4
-      # 2️⃣ Substitui a pasta custom dentro do container
-      - name: Copy custom extensions
-        run: |
-          rm -rf hybris/bin/custom
-          cp -r ./custom hybris/bin/custom
-      # 3️⃣ Build das extensões
       - name: Build Extensions
         run: |
           cd hybris/bin/platform
