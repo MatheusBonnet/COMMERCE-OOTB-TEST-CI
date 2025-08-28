@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Build Extensions
         run: |
-          cd opt/hybris/bin/platform
+          cd /opt/hybris/bin/platform
           if [ -f ./setantenv.sh ]; then
             bash -c "source ./setantenv.sh && ant all"
           else
