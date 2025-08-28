@@ -18,8 +18,8 @@ jobs:
       # 2️⃣ Substitui a pasta custom dentro do container
       - name: Copy custom extensions
         run: |
-          rm -rf /opt/hybris/bin/custom
-          cp -r ./custom /opt/hybris/bin/custom
+          rm -rf /opt/hybris/bin/custom || true
+          cp -r $GITHUB_WORKSPACE/custom /opt/hybris/bin/custom
       # 3️⃣ Build das extensões
       - name: Build Extensions
         run: |
